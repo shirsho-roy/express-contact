@@ -7,6 +7,7 @@ const port=process.env.PORT||5000;
 //Middlewares
 app.use(express.json());
 app.use('/api/contacts',require("./routes/contactroute.js")); 
+app.use('/api/users',require("./routes/userRoutes.js"));
 app.use(errorHandler)
 connectDb();
 app.listen(port,()=>{
